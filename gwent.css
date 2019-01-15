@@ -1,0 +1,44 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+}
+
+.playground {
+    width: 1200px;
+    height: 920px;
+    background: url("./playground.jpg") no-repeat center center;
+    background-size: contain;
+    overflow: hidden;
+
+    margin: 0 auto;
+}
+
+li {
+    display: inline-block;
+}
+
+#wrapper {
+    position: absolute;
+    top: 740px;
+    width: 100%;
+    display: flex;
+    text-align: center;
+}
+
+#my-hand {
+    width: 100%;
+}
+
+
+ul {
+    padding: 0;
+}
+
+li:hover:not(.choosed) {
+    opacity: 0.5;
+}
+
+li.choosed {
+    transform: translateY(-15px) scale(1.1);
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Gwent</title>
+    <link rel="stylesheet" href="./gwent.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.js"></script>
+</head>
+<body>
+    <div class="playground">
+    </div>
+
+    <div id="wrapper">
+        <div id="my-hand">
+            <ul>
+                <li
+                        v-for="card in cards"
+                        :style="{marginLeft: card.bias}"
+                        :class="{choosed: card.isChoosed}"
+                        @click="choose(card.id)"
+                >
+                    <img :src="card.url" alt="card" width="87px" height="161px">
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+
+
+<script src="./gwent.js"></script>
+
+</html>
