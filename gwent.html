@@ -10,8 +10,27 @@
     <div class="playground">
     </div>
 
-    <div id="wrapper">
-        <div id="my-hand">
+    
+
+
+    <div id="opp-wrapper" class="wrapper">
+        <div id="opp-hand" class="hand">
+            <ul>
+                <li
+                        v-for="card in cards"
+                        :style="{marginLeft: card.bias}"
+                        :class="{choosed: card.isChoosed}"
+                >
+                    <img :src="card.url" alt="card" width="87px" height="161px">
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+
+    <div id="my-wrapper" class="wrapper">
+        <div id="my-hand" class="hand">
             <ul>
                 <li
                         v-for="card in cards"
